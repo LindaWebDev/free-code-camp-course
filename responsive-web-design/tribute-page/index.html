@@ -1,0 +1,222 @@
+<html>
+
+<head>
+    <title>freeCodeCamp Course - Responsive Web Design - Tribute Page</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap">
+
+    <style>
+        /* Reset */
+        body {
+            margin: 0;
+            font-family: "Roboto", Arial, sans-serif;
+            font-size: 16px;
+            line-height: 26px;
+            color: #212121;
+        }
+
+        figure {
+            margin: 0;
+        }
+
+        p {
+            margin: 0 0 30px;
+        }
+
+        /* End Reset */
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .col {
+            width: 100%;
+            flex: 0 0 100%;
+        }
+
+        .col:last-child {
+            order: -1;
+        }
+
+        .text {
+            padding: 60px 25px;
+        }
+
+        .title {
+            font-size: 50px;
+            line-height: 44px;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: #212121;
+            margin: 0 0 30px;
+        }
+
+        .subtitle {
+            font-size: 22px;
+            line-height: 28px;
+            color: #848484;
+            margin: 0 0 30px;
+        }
+
+        .image {
+            display: block;
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+            transform: scaleX(-1);
+        }
+
+        .figure {
+            position: relative;
+        }
+
+        .figcaption {
+            position: absolute;
+            bottom: 0;
+            font-size: 14px;
+            line-height: 18px;
+            color: #fff;
+            font-style: italic;
+            padding: 15px 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #212121;
+            color: #fff;
+            padding: 15px 30px;
+            text-decoration: none;
+            transition: background 0.2s linear;
+        }
+
+        .btn:hover {
+            background: #000;
+        }
+
+        @media (min-width: 576px) {
+            .col:first-child {
+                width: 60%;
+                flex: 0 0 60%;
+            }
+
+            .col:last-child {
+                width: 40%;
+                flex: 0 0 40%;
+                order: initial;
+            }
+
+            .text {
+                padding: 150px 100px 0 50px;
+            }
+
+            .title {
+                font-size: 70px;
+                line-height: 58px;
+            }
+
+            .subtitle {
+                font-size: 24px;
+                line-height: 32px;
+            }
+
+            .figure:before {
+                content: "";
+                display: block;
+                width: 200px;
+                height: 100px;
+                background-image: linear-gradient(-90deg, #000 0%, #000 50%, #6d6d6d 50%, #6d6d6d 100%);
+                position: absolute;
+                top: 0;
+                left: -199px;
+            }
+
+            .figure:after {
+                content: "";
+                display: block;
+                width: 100px;
+                height: 100px;
+                background: #212121;
+                position: absolute;
+                top: 99px;
+                left: -99px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .text {
+                padding: 190px 150px 0 50px;
+            }
+
+            .figure:before {
+                width: 300px;
+                height: 150px;
+                left: -299px;
+            }
+
+            .figure:after {
+                width: 150px;
+                height: 150px;
+                top: 149px;
+                left: -149px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .text {
+                padding: 220px 250px 0 50px;
+            }
+
+            .figure:before {
+                width: 400px;
+                height: 200px;
+                left: -399px;
+            }
+
+            .figure:after {
+                width: 200px;
+                height: 200px;
+                top: 199px;
+                left: -199px;
+            }
+        }
+
+        @media (min-width: 1440px) {
+            .text {
+                padding: 300px 250px 0 100px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <main id="main">
+        <div class="row">
+            <div class="col">
+                <div class="text">
+                    <section id="tribute-info">
+                        <h1 id="title" class="title">Tinker <br />Hatfield</h1>
+                        <h2 class="subtitle">Het genie achter de iconische Nike schoenen</h2>
+                        <p>Samen met Peter Moore is Tinker wellicht de godfather van het ontwerpen van sneakers binnen Nike. Hatfield begon in 1981 met werken bij Nike in Portland, Oregon. Hiervoor heeft hij een opleiding gevolgd aan de University of Oregon waar hij architectuur studeerde.Tinker realiseerde zich dat zijn achtergrond in architectuur gebruikt kan worden voor shoe design en begon in 1985 op deze afdeling bij Nike.</p>
+                        <a href="https://www.burnedsports.com/nl/blogs/burned-magazine/het-genie-tinker-hatfield/" target="_blank" id="tribute-link" class="btn">Lees meer over Tinker Hatfield</a>
+                    </section>
+                </div>
+            </div>
+            <div class="col">
+                <figure id="img-div" class="figure">
+                    <img id="image" class="image" src="http://purchaze.nl/news-de/wp-content/uploads/Tinker-Hatfield.jpg" alt="Tinker Hatfield" width="720" height="960" />
+                    <figcaption id="img-caption" class="figcaption">Tinker Hatfield, designer van o.a. de Air Jordan sneakers</figcaption>
+                </figure>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>
